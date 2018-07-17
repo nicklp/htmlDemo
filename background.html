@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>背景</title>
+		<style>
+			div{
+				width: 500px;
+				height: 200px;
+			}
+			div:nth-child(1){
+				background-color: aquamarine;
+			}
+			div:nth-child(2){
+				background-image: url(img/icon.gif);
+				/*背景重复方式
+				 background-repeat：
+				 no-repeat:不平铺
+				 repeat:默认，横向及纵向平铺
+				 repeat-x:横向平铺
+				 repeat-y:纵向平铺
+				 */
+				background-repeat: repeat-y;
+			}
+			.tubiao{
+				/*此处宽度和高度能够覆盖div标签选择器中的宽度和高度的原因：类选择器优先级别高于标签选择器*/
+				width: 135px;
+				height: 140px;
+				background: red;
+				background-image: url(img/1.jpg);
+				/*设置背景图片偏移*/
+				
+			}
+			.redflower{
+				background-position: -615px -55px; /*背景图片向左平移610px*/
+			}
+			
+			.orangeflower{
+				background-position: -430px -230px;
+			}
+			.greenflower{
+				background-position: center bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div class="tubiao redflower"></div>
+		<div class="tubiao orangeflower"></div>
+		<div class="tubiao greenflower"></div>
+	</body>
+</html>
