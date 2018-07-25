@@ -15,6 +15,22 @@
 				height: 200px;
 				background: red;
 			}
+			
+			@media only screen and (min-width: 375px) {
+				.box{
+					background: pink;
+				}
+			}
+			@media only screen and (min-width: 380px) and (max-width:560px) {
+				.box{
+					background: yellow;
+				}
+			}
+			@media only screen and (min-width: 600px) and (max-width:900px) {
+				.box{
+					background: green;
+				}
+			}
 		</style>
 		<script>
 			var scale = 1 / window.devicePixelRatio; //获取当前设备像素比
