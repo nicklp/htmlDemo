@@ -16,9 +16,9 @@
 				background: red;
 			}
 			
-			@media only screen and (min-width:901px) {
+			@media only screen and (min-width: 375px) {
 				.box{
-					background: blue;
+					background: pink;
 				}
 			}
 			@media only screen and (min-width: 380px) and (max-width:560px) {
@@ -32,14 +32,25 @@
 				}
 			}
 		</style>
-		<script>
-			var scale = 1 / window.devicePixelRatio; //获取当前设备像素比
-			console.log("当前设备像素比：" + scale);
-			//根据计算出来的设备像素比，动态的为meta标签设置content的内容
-    		document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
-		</script>
+	
 	</head>
 	<body>
-		<div class="box"></div>
+		<div class="box" ></div>
+		<p id="box"></p>
 	</body>
+	<script>
+		var scale = 1 / window.devicePixelRatio; //获取当前设备像素比
+		console.log("当前设备像素比：" + scale);
+		//根据计算出来的设备像素比，动态的为meta标签设置content的内容
+		document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	
+		//document.documentElement.clientWidth; //获取设备像素
+		var device_width = document.documentElement.clientWidth;
+		var device_height = document.documentElement.clientHeight;
+		console.log("当前设备像素宽度：" + device_width);
+		console.log("当前设备像素高度：" + device_height);
+		
+		document.getElementById("box").innerHTML = "当前设备像素宽度：" + device_width + "<br />当前设备像素高度：" + device_height;
+	</script>
 </html>
+
