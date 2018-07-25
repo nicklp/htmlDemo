@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title></title>
 		<style>
 			/*
@@ -13,39 +14,36 @@
 			 		最小宽度：992px，container宽度为 970px
 			 * */
 			
-			@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
-			    html { font-size: 703%; }
+			/*@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+			    html { font-size: 70.3%; }
 			}
 			@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
-			    html { font-size: 732.4%; }
+			    html { font-size: 73.24%; }
 			}
 			@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
-			    html { font-size: 750%; }
+			    html { font-size: 75.0%; }
 			}
 			@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
-			    html { font-size: 781.25%; }
+			    html { font-size: 78.125%; }
 			}
 			@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
-			    html { font-size: 808.6%; }
+			    html { font-size: 80.86%; }
 			}
 			@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
-			    html { font-size: 843.75%; }
-			}
-			html {font-size: 625%; /*100 ÷ 16 × 100% = 625%*/}
-			.container{
-				font-size: 1rem;
+			    html { font-size: 84.375%; }
+			}*/
+			/*html {font-size: 62.5%; }*//*100 ÷ 16 × 100% = 625%*/
+			/*.container{
+				font-size: 20px;
 			}
 			h2{
-				font-size: 2rem;
-			}
-			p{
-				font-size: 1rem;
-			}
+				font-size: 40px;
+			}*/
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<h2>为什么要使用rem</h2>
+			<h2>为什么要使用rem&nbsp;11:59</h2>
 			<p>
 				之前有些适配做法，是通过js动态计算viewport的缩放值（initial-scale）。
 
@@ -54,6 +52,7 @@
 				但直接这样强制页面缩放过于粗暴，会导致页面图片文字失真模糊。
 				
 				Px是相对固定单位，字号大小直接被定死，所以用户无法根据自己设置的浏览器字号而缩放，em和rem虽然都是相对单位，但em是相对于它的父元素的font-size，页面层级越深，em的换算就越复杂，而rem是直接相对于根元素，这就避开了很多层级关系。移动端新型浏览器对rem的兼容很好，可以放心使用。
+				
 			</p>
 		</div>
 	</body>
