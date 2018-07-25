@@ -11,8 +11,8 @@
 				padding: 0;
 			}
 			.box{
-				width:200px;
-				height: 200px;
+				width:2.66666667rem;
+				height:2.66666667rem;
 				background: red;
 			}
 			
@@ -43,6 +43,8 @@
 		console.log("当前设备像素比：" + scale);
 		//根据计算出来的设备像素比，动态的为meta标签设置content的内容
 		document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px'; //设置html的font-size属性为设备像素的10%
+	
 	
 		//document.documentElement.clientWidth; //获取设备像素
 		var device_width = document.documentElement.clientWidth;
@@ -53,4 +55,3 @@
 		document.getElementById("box").innerHTML = "当前设备像素宽度：" + device_width + "<br />当前设备像素高度：" + device_height;
 	</script>
 </html>
-
